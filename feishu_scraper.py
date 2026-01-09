@@ -45,6 +45,29 @@ def clean_markdown_content(markdown_text):
         
     return markdown_text
 
+def get_processed_urls():
+    """Scans existing markdown files to find URLs that have already been scraped."""
+    processed = set()
+    if not os.path.exists(OUTPUT_DIR):
+        return processed
+        
+    print("🔍 Scanning existing files for processed URLs...")
+    for filename in os.listdir(OUTPUT_DIR):
+        if filename.endswith(".md"):
+            try:
+                with open(os.path.join(OUTPUT_DIR, filename), "r", encoding="utf-8") as f:
+                    for _ in range(20): # Scan first 20 lines
+                        line = f.readline()
+                        if line.startswith("URL:"):
+                            url = line.replace("URL:", "").strip()
+                            processed.add(url)
+                            break
+            except Exception:
+                pass
+    
+    print(f"   Found {len(processed)} already processed cases.")
+    return processed
+
 def save_case_study(page, url):
     try:
         # print(f"   Processing: {url}")
@@ -107,6 +130,9 @@ def save_case_study(page, url):
         print(f"     ❌ Failed: {e}")
 
 def run_scraper():
+    # 1. Load already processed URLs to skip them
+    processed_urls = get_processed_urls()
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=HEADLESS_MODE)
         context = browser.new_context(
@@ -149,9 +175,11 @@ def run_scraper():
             if href:
                 full_url = urljoin(START_URL, href)
                 if "/customers/" in full_url or "/client/" in full_url:
-                     extracted_urls.add(full_url)
+                     # Check against processed list, handling potential slight variations (trailing slash)
+                     if full_url not in processed_urls:
+                        extracted_urls.add(full_url)
         
-        print(f"   📊 Found {len(extracted_urls)} unique case URLs.")
+        print(f"   📊 Found {len(extracted_urls)} NEW unique case URLs (Skipped {len(processed_urls)}).")
         print(f"🚀 Entering Scraping Phase ({len(extracted_urls)} items)")
         
         for i, url in enumerate(list(extracted_urls)):

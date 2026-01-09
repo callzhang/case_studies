@@ -2,7 +2,6 @@
 
 URL: https://www.feishu.cn/customers/dedaoai
 
-
 ![](https://p1-hera.feishucdn.com/tos-cn-i-jbbdkfciu3/69cd435386fa44d2992bc77449826fdb~tplv-jbbdkfciu3-png:0:0.png)
 
 文娱传媒
@@ -176,3 +175,4 @@ URL: https://www.feishu.cn/customers/dedaoai
 据得到同事介绍，“罗盘AI”不仅仅是一次“Data+AI融合”的尝试，更是团队在未来重点发力的长期战略项目，飞书智能伙伴创建平台越来越完善的LLMOps能力，成为该规划落地的强大后盾。不仅仅在数据领域，在得到关键的内容生产环节，还发掘出“原创保障稽查员”AI应用，在 法务、编辑判断公域内容是否抄袭侵权了得到独家内容这一环节，从15分钟提效至1分钟。未来，相信会有越来越多的 “数据驱动”、“工作提效”的AI应用，在飞书智能伙伴创建平台上生长出来。​
 
 ![](https://p1-hera.feishucdn.com/tos-cn-i-jbbdkfciu3/1a98f55f9cc24e61a1162f0464f1fbcf~tplv-jbbdkfciu3-png:0:0.png)[联系我们](/salessupport?from=customers_side_contact_us)下载案例长图
+

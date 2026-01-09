@@ -2,7 +2,6 @@
 
 URL: https://www.feishu.cn/customers/zhonghua
 
-
 ![](https://p1-hera.feishucdn.com/tos-cn-i-jbbdkfciu3/bf778eccc0c9470fac0b5bb9ac281f78~tplv-jbbdkfciu3-image:0:0.image)
 
 央国企
@@ -126,3 +125,4 @@ OKR ，赋能传统行业创新​
 先进的工具会支持企业的创新发展，充足的信息是开展正确决策的前提。中化环境已在实践 OKR 的路上，步伐日益稳健。从走出互联网的刹那起，OKR 才算是有了生命力。它需要赋能传统行业，在人们看得见的地方生根，才能成为数字化时代的基础设施。​
 
 ![](https://p1-hera.feishucdn.com/tos-cn-i-jbbdkfciu3/1a98f55f9cc24e61a1162f0464f1fbcf~tplv-jbbdkfciu3-png:0:0.png)[联系我们](/salessupport?from=customers_side_contact_us)下载案例长图
+
